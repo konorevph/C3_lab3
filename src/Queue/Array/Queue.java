@@ -57,5 +57,13 @@ public class Queue implements QueueInterface {
         if (i == 0) return ARRAY_LENGTH - 1;
         return i - 1;
     }
+
+    public String toString() {
+        String result = "";
+        for (int i = head; i != tail; i = next(i)) {
+            result += array[i].toString() + '\n';
+        }
+        return result;
+    }
 }
 

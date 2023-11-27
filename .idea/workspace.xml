@@ -5,28 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34d9ef6c-ca25-41cd-8420-58a19afb1c33" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/C3_lab1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/C3_lab3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BasedOnArrayList/List.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BasedOnArrayList/Position.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ListElems/PostalDelivery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Map/MapInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyExceptions/ExceedingListLimitException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Queue/ADTList/Queue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Queue/Array/Queue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Queue/List/Queue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Queue/QueueInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Stack/ADTList/Stack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Stack/Array/Stack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Stack/List/Stack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Stack/StackInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Map/ADTList/Map.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Map/List/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Map/MapInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map/MapInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Queue/ADTList/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queue/ADTList/Queue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Queue/Array/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queue/Array/Queue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +28,22 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="f50f7717-d7db-4f52-a7af-1fb277cecd7b" />
+        <option name="url" value="https://github.com/konorevph/C3_lab3.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Queue/List/Queue.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -93,6 +94,29 @@
       <option name="presentableId" value="Default" />
       <updated>1700919326354</updated>
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1701077969044</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701077969044</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
 </project>
