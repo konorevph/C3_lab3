@@ -1,6 +1,5 @@
 package Map.List;
 
-import ListElems.PostalDelivery;
 import Map.MapInterface;
 
 public class Map implements MapInterface{
