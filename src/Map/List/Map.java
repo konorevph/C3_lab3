@@ -5,13 +5,16 @@ import Map.MapInterface;
 
 public class Map implements MapInterface{
     private static class Item {
-        private PostalDelivery x;
+        private char[] name;
+        private char[] address;
         private Item next;
-        public Item(PostalDelivery x) {
-            this.x = x;
+        public Item(char[] name, char[] address) {
+            this.name = name;
+            this.address = address;
         }
-        public Item(PostalDelivery x, Item next) {
-            this.x = x;
+        public Item(char[] name, char[] address, Item next) {
+            this.name = name;
+            this.address = address;
             this.next = next;
         }
     }
@@ -19,35 +22,33 @@ public class Map implements MapInterface{
     private Item head;
 
     @Override
-    public void assign(String d, String r) {
-        PostalDelivery postalDelivery = new PostalDelivery(d, r);
+    public void assign(char[] d, char[] r) {
 
         if (head == null) {
-            head = new Item(postalDelivery);
+            head = new Item(d, r);
             return;
         }
 
         Item tmp = head, prev = null;
         while (tmp != null) {
-            if (arrayEquals(tmp.x.name, postalDelivery.name)) {
-                tmp.x.address = postalDelivery.address;
+            if (arrayEquals(tmp.name, d)) {
+                tmp.address = r;
                 return;
             }
             prev = tmp;
             tmp = tmp.next;
         }
 
-        prev.next = new Item(postalDelivery);
+        prev.next = new Item(d, r);
     }
 
     @Override
-    public boolean compute(String d, String r) {
-        PostalDelivery postalDelivery = new PostalDelivery(d, r);
+    public boolean compute(char[] d, char[] r) {
 
         Item tmp = head;
         while (tmp != null) {
-            if (arrayEquals(tmp.x.name, postalDelivery.name)) {
-                tmp.x.address = postalDelivery.address;
+            if (arrayEquals(tmp.name, d)) {
+                System.arraycopy(tmp.address, 0, r, 0, tmp.address.length);
                 return true;
             }
             tmp = tmp.next;
@@ -60,15 +61,23 @@ public class Map implements MapInterface{
         head = null;
     }
 
-//    public String toString() {
-//        String result = "";
-//        Item tmp = head;
-//        while (tmp != null) {
-//            result += "Name: " + tmp.name.toString() + "; address: " + tmp.address.toString() + '\n';
-//            tmp = tmp.next;
-//        }
-//        return result;
-//    }
+    public String toString() {
+        String result = "";
+        Item tmp = head;
+        while (tmp != null) {
+            result += "Name: ";
+            for (char c : tmp.name) {
+                result += c;
+            }
+            result += "; address: ";
+            for (char c : tmp.address) {
+                result += c;
+            }
+            result += '\n';
+            tmp = tmp.next;
+        }
+        return result;
+    }
 
     // Если используем PostalDelivery
     private boolean arrayEquals(char[] A, char[] B) {

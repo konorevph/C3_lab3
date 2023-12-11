@@ -130,6 +130,18 @@ public class List {
         return new Position(i);
     }
 
+    public Position Locate(char[] name) {
+        int i = 0;
+        for (; i < end; i++) {
+            int j = 0;
+            for (; j < array[i].name.length; j++) {
+                if (array[i].name[j] != name[j]) break;
+            }
+            if (j == array[i].name.length) break;
+        }
+        return new Position(i);
+    }
+
     /*
     Задача: Вернуть объект в позиции p списка
     Параметры: p -- позиция объекта

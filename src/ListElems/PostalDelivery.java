@@ -23,6 +23,10 @@ public class PostalDelivery {
             this.address[i] = address.charAt(i);
         }
     }
+    public PostalDelivery(char[] name, char[] address) {
+        this.name = name;
+        this.address = address;
+    }
 
     //Копирующий конструктор
     public PostalDelivery(PostalDelivery postalDelivery){
