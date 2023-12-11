@@ -5,12 +5,12 @@ import Map.MapInterface;
 
 public class Map implements MapInterface{
     @Override
-    public void assign(String d, String r) {
+    public void assign(char[] d, char[] r) {
 
     }
 
     @Override
-    public boolean compute(String d, String r) {
+    public boolean compute(char[] d, char[] r) {
         return false;
     }
 
