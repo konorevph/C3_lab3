@@ -20,16 +20,21 @@ public class Map implements MapInterface{
 
     private Item head;
 
+    /*
+    Не зависимо от существования в отображении d, устанавливаем M(d) = r
+     */
     @Override
     public void assign(char[] d, char[] r) {
-
+        // Если список пуст
         if (head == null) {
             head = new Item(d, r);
             return;
         }
 
+        // Цикл по списку
         Item tmp = head, prev = null;
         while (tmp != null) {
+            // Если d определено, то заменяем для него значение
             if (arrayEquals(tmp.name, d)) {
                 tmp.address = r;
                 return;
@@ -38,14 +43,19 @@ public class Map implements MapInterface{
             tmp = tmp.next;
         }
 
+        // Если d не определено
         prev.next = new Item(d, r);
     }
 
+    /*
+    Истина, если M(d) определено. В r записывается значение M(d).
+     */
     @Override
     public boolean compute(char[] d, char[] r) {
-
+        // Цикл по списку
         Item tmp = head;
         while (tmp != null) {
+            //Если d определено, вставляем в r его значение и выводим true
             if (arrayEquals(tmp.name, d)) {
                 System.arraycopy(tmp.address, 0, r, 0, tmp.address.length);
                 return true;
@@ -55,6 +65,9 @@ public class Map implements MapInterface{
         return false;
     }
 
+    /*
+    Очищаем отображение.
+     */
     @Override
     public void makeNull() {
         head = null;
@@ -78,7 +91,9 @@ public class Map implements MapInterface{
         return result;
     }
 
-    // Если используем PostalDelivery
+    /*
+   Проверка эквивалентности значений массивов
+    */
     private boolean arrayEquals(char[] A, char[] B) {
         if (A.length != B.length) return false;
         for (int i = 0; i < A.length; i++) {
