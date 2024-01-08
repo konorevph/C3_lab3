@@ -67,6 +67,7 @@ public class Queue implements QueueInterface {
     }
 
     public String toString() {
+        if (tail == null) return "";
         Item tmp = tail.next;
 
         String result = "";

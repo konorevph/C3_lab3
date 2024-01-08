@@ -18,21 +18,16 @@ public class Stack implements StackInterface {
         }
     }
 
-    private Item head;
+    private Item head = null;
 
     @Override
     public void push(PostalDelivery x) {
         PostalDelivery copy = new PostalDelivery(x);
-        if (head == null) {
-            head = new Item(copy);
-        } else {
-            head = new Item(copy, head);
-        }
+        head = new Item(copy, head);
     }
 
     @Override
     public PostalDelivery pop() {
-        if (head == null) throw new ExceedingListLimitException("Stack is empty");
         PostalDelivery res = head.x;
         head = head.next;
         return res;
@@ -40,7 +35,6 @@ public class Stack implements StackInterface {
 
     @Override
     public PostalDelivery top() {
-        if (head == null) throw new ExceedingListLimitException("Stack is empty");
         return new PostalDelivery(head.x);
     }
 

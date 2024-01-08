@@ -15,30 +15,27 @@ public class Stack implements StackInterface {
     }
     @Override
     public void push(PostalDelivery x) {
-        if (head == 100) throw new ExceedingListLimitException("Stack is full");
         array[head++] = new PostalDelivery(x);
     }
 
     @Override
     public PostalDelivery pop() {
-        if (head == 0) throw new ExceedingListLimitException("Stack is empty");
         return array[head--];
     }
 
     @Override
     public PostalDelivery top() {
-        if (head == 0) throw new ExceedingListLimitException("Stack is empty");
         return new PostalDelivery(array[head]);
     }
 
     @Override
     public boolean empty() {
-        return head == 0;
+        return head == -1;
     }
 
     @Override
     public boolean full() {
-        return head == 100;
+        return head == ARRAY_LENGTH - 1;
     }
 
     @Override

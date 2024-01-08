@@ -17,8 +17,11 @@ public class Main {
             PostalDelivery postalDelivery = new PostalDelivery("name " + i, "address " + i);
             queue.enqueue(postalDelivery);
         }
+        queue.dequeue();
         System.out.println("Queue:\n" + queue);
 
+
+        System.out.println("Map");
         Map map = new Map();
 
         PostalDelivery mapItem = new PostalDelivery("name1", "address1");

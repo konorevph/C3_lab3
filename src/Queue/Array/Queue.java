@@ -10,7 +10,7 @@ public class Queue implements QueueInterface {
 
     public Queue() {
         array = new PostalDelivery[ARRAY_LENGTH];
-        head = 0;
+        head = 1;
         tail = 0;
     }
     @Override
