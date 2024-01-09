@@ -35,7 +35,6 @@ public class Queue implements QueueInterface {
 
     @Override
     public PostalDelivery dequeue() {
-        if (tail == null) throw new ExceedingListLimitException("Queue is empty");
         PostalDelivery result = tail.next.x;
         if (tail == tail.next) {
             tail = null;
@@ -47,7 +46,6 @@ public class Queue implements QueueInterface {
 
     @Override
     public PostalDelivery front() {
-        if (tail == null) throw new ExceedingListLimitException("Queue is empty");
         return new PostalDelivery(tail.next.x);
     }
 

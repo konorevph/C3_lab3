@@ -15,14 +15,12 @@ public class Queue implements QueueInterface {
     }
     @Override
     public void enqueue(PostalDelivery x) {
-        if (full()) throw new ExceedingListLimitException("Queue is full");
         array[tail] = new PostalDelivery(x);
         tail = next(tail);
     }
 
     @Override
     public PostalDelivery dequeue() {
-        if (empty()) throw new ExceedingListLimitException("Queue is empty");
         PostalDelivery res = array[head];
         head = next(head);
         return res;
@@ -30,7 +28,6 @@ public class Queue implements QueueInterface {
 
     @Override
     public PostalDelivery front() {
-        if (empty()) throw new ExceedingListLimitException("Queue is empty");
         return new PostalDelivery(array[head]);
     }
 

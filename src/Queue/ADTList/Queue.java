@@ -17,7 +17,6 @@ public class Queue implements QueueInterface {
 
     @Override
     public PostalDelivery dequeue() {
-        if (list.First().equals(list.End())) throw new ExceedingListLimitException("Queue is empty");
         PostalDelivery result = list.Retrieve(list.First());
         list.Delete(list.First());
         return result;
@@ -25,7 +24,6 @@ public class Queue implements QueueInterface {
 
     @Override
     public PostalDelivery front() {
-        if (list.First().equals(list.End())) throw new ExceedingListLimitException("Queue is empty");
         return list.Retrieve(list.First());
     }
 
