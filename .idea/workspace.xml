@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34d9ef6c-ca25-41cd-8420-58a19afb1c33" name="Changes" comment="Comments has been added to Map">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_12_2023_19_18_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_12_2023_19_18__Changes_.xml" beforeDir="false" />
+    <list default="true" id="34d9ef6c-ca25-41cd-8420-58a19afb1c33" name="Changes" comment="Working map">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Queue/Array/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queue/Array/Queue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Queue/List/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queue/List/Queue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Stack/Array/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stack/Array/Stack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Stack/List/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stack/List/Stack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Map/ADTList/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map/ADTList/Map.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +20,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="origin/master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,18 +52,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/Programs/java/C3_lab3",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.build"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Programs/java/C3_lab3&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Programming\Java\C3_lab3\src" />
@@ -127,5 +124,16 @@
     <MESSAGE value="init" />
     <MESSAGE value="Comments has been added to Map" />
     <option name="LAST_COMMIT_MESSAGE" value="Comments has been added to Map" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Map/ADTList/Map.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,5 +1,5 @@
 import ListElems.PostalDelivery;
-import Map.ADTList.Map;
+import Map.List.Map;
 import Queue.ADTList.Queue;
 import Stack.ADTList.Stack;
 

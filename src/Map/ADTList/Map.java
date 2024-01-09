@@ -14,21 +14,23 @@ public class Map implements MapInterface{
     public void assign(char[] d, char[] r) {
         // Создаём объект для вставки в список. Берём позицию начала списка.
         PostalDelivery postalDelivery = new PostalDelivery(d, r);
-        Position position = list.First();
 
-        // Цикл по списку
-        while (!position.equals(list.End())) {
-            // Если нашли d в отображении, то заменяем значение для M(d) на r
-            if (arrayEquals(list.Retrieve(position).name, d)) {
-                list.Insert(position, postalDelivery);
-                list.Delete(list.Next(position));
-                return;
-            }
-            position = list.Next(position);
+        // Если список пуст
+        if (list.First().equals(list.End())) {
+            list.Insert(list.First(), postalDelivery);
+            return;
+        }
+
+        // Поиск позиции в списке
+        Position position = FindPositionByKey(d);
+        if (position != null) {
+            list.Insert(position, postalDelivery);
+            list.Delete(list.Next(position));
+            return;
         }
 
         // Если d не определено в отображении, то создаём новый
-        list.Insert(position, postalDelivery);
+        list.Insert(list.End(), postalDelivery);
     }
 
     /*
@@ -36,18 +38,25 @@ public class Map implements MapInterface{
      */
     @Override
     public boolean compute(char[] d, char[] r) {
-        // Цикл по списку
+        Position position = FindPositionByKey(d);
+
+        if (position == null)
+            return false;
+
+        PostalDelivery postalDelivery = list.Retrieve(position);
+        System.arraycopy(postalDelivery.address, 0, r, 0, r.length);
+        return true;
+    }
+
+    private Position FindPositionByKey(char[] key) {
         Position position = list.First();
         while (!position.equals(list.End())) {
-            // Вытягиваем значение из списка. Если d определено, то вставляем в r его значение и выводим true
-            PostalDelivery postalDelivery = list.Retrieve(position);
-            if (arrayEquals(postalDelivery.name, d)) {
-                System.arraycopy(postalDelivery.address, 0, r, 0, r.length);
-                return true;
+            if (arrayEquals(list.Retrieve(position).name, key)) {
+                return position;
             }
             position = list.Next(position);
         }
-        return false;
+        return null;
     }
 
     /*
