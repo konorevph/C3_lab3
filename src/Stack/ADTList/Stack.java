@@ -18,7 +18,6 @@ public class Stack implements StackInterface {
 
     @Override
     public PostalDelivery pop() {
-        if (empty()) throw new ExceedingListLimitException("Stack is empty");
         PostalDelivery result = list.Retrieve(list.First());
         list.Delete(list.First());
         return result;
@@ -26,8 +25,7 @@ public class Stack implements StackInterface {
 
     @Override
     public PostalDelivery top() {
-        if (empty()) throw new ExceedingListLimitException("Stack is empty");
-        return list.Retrieve(list.First());
+        return new PostalDelivery(list.Retrieve(list.First()));
     }
 
     @Override

@@ -36,7 +36,7 @@ public class Map implements MapInterface{
         while (tmp != null) {
             // Если d определено, то заменяем для него значение
             if (arrayEquals(tmp.name, d)) {
-                tmp.address = r;
+                tmp.address = r; // todo Присваиваем только копию
                 return;
             }
             prev = tmp;
