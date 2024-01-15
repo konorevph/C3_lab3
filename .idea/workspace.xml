@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34d9ef6c-ca25-41cd-8420-58a19afb1c33" name="Changes" comment="Изменены отображения на АТД">
+    <list default="true" id="34d9ef6c-ca25-41cd-8420-58a19afb1c33" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Queue/ADTList/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queue/ADTList/Queue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Queue/Array/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queue/Array/Queue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Queue/List/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queue/List/Queue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Map/List/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map/List/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Stack/ADTList/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stack/ADTList/Stack.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,16 +133,5 @@
     <MESSAGE value="Comments has been added to Map" />
     <MESSAGE value="Изменены отображения на АТД" />
     <option name="LAST_COMMIT_MESSAGE" value="Изменены отображения на АТД" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Map/ADTList/Map.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
