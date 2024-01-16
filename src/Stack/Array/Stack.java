@@ -50,7 +50,7 @@ public class Stack implements StackInterface {
     public String toString() {
         String result = "";
         int i = head - 1;
-        while (i != 0) {
+        while (i != -1) {
             result += array[i--].toString() + '\n';
         }
         return result;

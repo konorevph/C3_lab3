@@ -37,17 +37,17 @@ public class Queue implements QueueInterface {
 
     @Override
     public boolean empty() {
-        return tail == head;
-    }
-
-    @Override
-    public boolean full() {
         return next(tail) == head;
     }
 
     @Override
+    public boolean full() {
+        return next(next(tail)) == head;
+    }
+
+    @Override
     public void makeNull() {
-        tail = head;
+        head = next(tail);
     }
 
     private int next(int i) {

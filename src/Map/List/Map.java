@@ -28,18 +28,17 @@ public class Map implements MapInterface{
             return;
         }
 
-        // Цикл по списку
-        Item tmp = head, prev = null;
-        while (tmp != null) {
-            // Если d определено, то заменяем для него значение (копируем из r)
-            if (arrayEquals(tmp.name, d)) {
-                System.arraycopy(r, 0, tmp.address, 0, r.length);
-                return;
-            }
-            prev = tmp;
-            tmp = tmp.next;
+        if (arrayEquals(head.name, d)) {
+            System.arraycopy(r, 0, head.address, 0, r.length);
+            return;
         }
 
+        // Цикл по списку
+        Item prev = findPrevious(d);
+        if (prev.next != null) {
+            System.arraycopy(r, 0, prev.next.address, 0, r.length);
+            return;
+        }
         // Если d не определено
         prev.next = new Item(d, r);
     }
@@ -49,15 +48,16 @@ public class Map implements MapInterface{
      */
     @Override
     public boolean compute(char[] d, char[] r) {
+        if (head == null) return false;
+        if (arrayEquals(head.name, d)) {
+            System.arraycopy(head.address, 0, r, 0, head.address.length);
+            return true;
+        }
         // Цикл по списку
-        Item tmp = head;
-        while (tmp != null) {
-            //Если d определено, вставляем в r его значение и выводим true
-            if (arrayEquals(tmp.name, d)) {
-                System.arraycopy(tmp.address, 0, r, 0, tmp.address.length);
-                return true;
-            }
-            tmp = tmp.next;
+        Item prev = findPrevious(d);
+        if (prev.next != null) {
+            System.arraycopy(prev.next.address, 0, r, 0, prev.next.address.length);
+            return true;
         }
         return false;
     }
@@ -88,6 +88,15 @@ public class Map implements MapInterface{
         return result;
     }
 
+    private Item findPrevious(char[] d) {
+        Item prev = head, tmp = head.next;
+        while (tmp != null){
+            if (arrayEquals(d, tmp.name)) break;
+            prev = tmp;
+            tmp = tmp.next;
+        }
+        return prev;
+    }
     /*
    Проверка эквивалентности значений массивов
     */
