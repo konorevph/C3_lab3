@@ -10,11 +10,14 @@ public class Queue implements QueueInterface {
     public Queue() {
         list = new List();
     }
+
+    // Сохраняет копию (в Insert)
     @Override
     public void enqueue(PostalDelivery x) {
         list.Insert(list.End(), x);
     }
 
+    // Возвращает оригинал
     @Override
     public PostalDelivery dequeue() {
         PostalDelivery result = list.Retrieve(list.First());
@@ -22,6 +25,7 @@ public class Queue implements QueueInterface {
         return result;
     }
 
+    // Возвращает копию
     @Override
     public PostalDelivery front() {
         return list.Retrieve(list.First());

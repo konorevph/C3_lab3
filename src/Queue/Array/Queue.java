@@ -13,12 +13,15 @@ public class Queue implements QueueInterface {
         head = 1;
         tail = 0;
     }
+
+    // Сохраняет копию
     @Override
     public void enqueue(PostalDelivery x) {
         array[tail] = new PostalDelivery(x);
         tail = next(tail);
     }
 
+    // Возвращает оригинал
     @Override
     public PostalDelivery dequeue() {
         PostalDelivery res = array[head];
@@ -26,6 +29,7 @@ public class Queue implements QueueInterface {
         return res;
     }
 
+    // Возвращает копию
     @Override
     public PostalDelivery front() {
         return new PostalDelivery(array[head]);

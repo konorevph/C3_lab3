@@ -13,16 +13,20 @@ public class Stack implements StackInterface {
         array = new PostalDelivery[ARRAY_LENGTH];
         head = 0;
     }
+
+    // Пушит копию
     @Override
     public void push(PostalDelivery x) {
         array[head++] = new PostalDelivery(x);
     }
 
+    //Возвращает оригинал
     @Override
     public PostalDelivery pop() {
         return array[head--];
     }
 
+    // Возвращает копию
     @Override
     public PostalDelivery top() {
         return new PostalDelivery(array[head]);

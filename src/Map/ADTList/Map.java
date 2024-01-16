@@ -22,7 +22,7 @@ public class Map implements MapInterface{
         }
 
         // Поиск позиции в списке
-        Position position = FindPositionByKey(d);
+        Position position = list.Locate(d);
         if (position != null) {
             list.Insert(position, postalDelivery);
             list.Delete(list.Next(position));
@@ -38,7 +38,7 @@ public class Map implements MapInterface{
      */
     @Override
     public boolean compute(char[] d, char[] r) {
-        Position position = FindPositionByKey(d);
+        Position position = list.Locate(d);
 
         if (position == null)
             return false;

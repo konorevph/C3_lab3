@@ -11,11 +11,14 @@ public class Stack implements StackInterface {
     public Stack(){
         list = new List();
     }
+
+    // Копия создаётся в Insert
     @Override
     public void push(PostalDelivery x) {
         list.Insert(list.First(), x);
     }
 
+    // Возвращает оригинал
     @Override
     public PostalDelivery pop() {
         PostalDelivery result = list.Retrieve(list.First());
@@ -23,6 +26,7 @@ public class Stack implements StackInterface {
         return result;
     }
 
+    // Возвращает копию
     @Override
     public PostalDelivery top() {
         return new PostalDelivery(list.Retrieve(list.First()));

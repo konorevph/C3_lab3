@@ -22,17 +22,20 @@ public class Queue implements QueueInterface {
 
     private Item tail;
 
+    // Сохраняет копию
     @Override
     public void enqueue(PostalDelivery x) {
+        PostalDelivery copy = new PostalDelivery(x);
         if (tail == null) {
-            tail = new Item(x);
+            tail = new Item(copy);
             tail.next = tail;
         } else {
-            tail.next = new Item(x, tail.next);
+            tail.next = new Item(copy, tail.next);
             tail = tail.next;
         }
     }
 
+    // Возвращает оригинал
     @Override
     public PostalDelivery dequeue() {
         PostalDelivery result = tail.next.x;
@@ -44,6 +47,7 @@ public class Queue implements QueueInterface {
         return result;
     }
 
+    // Возвращает копию
     @Override
     public PostalDelivery front() {
         return new PostalDelivery(tail.next.x);

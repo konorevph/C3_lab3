@@ -20,12 +20,14 @@ public class Stack implements StackInterface {
 
     private Item head = null;
 
+    // Пушит копию
     @Override
     public void push(PostalDelivery x) {
         PostalDelivery copy = new PostalDelivery(x);
         head = new Item(copy, head);
     }
 
+    // Возвращает оригинал
     @Override
     public PostalDelivery pop() {
         PostalDelivery res = head.x;
@@ -33,6 +35,7 @@ public class Stack implements StackInterface {
         return res;
     }
 
+    // Возвращает копию
     @Override
     public PostalDelivery top() {
         return new PostalDelivery(head.x);
