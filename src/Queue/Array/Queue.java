@@ -17,8 +17,8 @@ public class Queue implements QueueInterface {
     // Сохраняет копию
     @Override
     public void enqueue(PostalDelivery x) {
-        array[tail] = new PostalDelivery(x);
         tail = next(tail);
+        array[tail] = new PostalDelivery(x);
     }
 
     // Возвращает оригинал
@@ -61,7 +61,7 @@ public class Queue implements QueueInterface {
 
     public String toString() {
         String result = "";
-        for (int i = head; i != tail; i = next(i)) {
+        for (int i = head; i != next(tail); i = next(i)) {
             result += array[i].toString() + '\n';
         }
         return result;

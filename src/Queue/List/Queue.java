@@ -70,13 +70,12 @@ public class Queue implements QueueInterface {
 
     public String toString() {
         if (tail == null) return "";
-        Item tmp = tail.next;
-
+        Item tmp = tail;
         String result = "";
-        while (tmp != tail) {
-            result += tmp.x.toString()+ '\n';
+        do {
             tmp = tmp.next;
-        }
+            result += tmp.x.toString()+ '\n';
+        } while (tmp != tail);
         return result;
     }
 }

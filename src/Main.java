@@ -1,7 +1,7 @@
 import ListElems.PostalDelivery;
 import Map.List.Map;
-import Queue.ADTList.Queue;
-import Stack.List.Stack;
+import Queue.Array.Queue;
+import Stack.ADTList.Stack;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,6 +10,7 @@ public class Main {
             PostalDelivery postalDelivery = new PostalDelivery("name " + i, "address " + i);
             stack.push(postalDelivery);
         }
+        stack.pop();
         System.out.println("Stack:\n" + stack);
 
         Queue queue = new Queue();
