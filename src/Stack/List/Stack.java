@@ -59,8 +59,9 @@ public class Stack implements StackInterface {
     public String toString() {
         String result = "";
         Item tmp = head;
-        while (head != null) {
-            result += head.toString();
+        while (tmp != null) {
+            result += tmp.x.toString() + '\n';
+            tmp = tmp.next;
         }
         return result;
     }

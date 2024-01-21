@@ -1,7 +1,7 @@
 import ListElems.PostalDelivery;
 import Map.List.Map;
 import Queue.ADTList.Queue;
-import Stack.Array.Stack;
+import Stack.List.Stack;
 
 public class Main {
     public static void main(String[] args) {
